@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fwp.moiveguide.MainActivity">
+
+    <include
+        android:id="@+id/rl_top"
+        layout="@layout/layout_main_top" />
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_refresh"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginBottom="@dimen/dp_size_55"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/dark_bg"
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+
+
+    <LinearLayout
+        android:background="@color/main_color"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_55">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/home"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Widget.AppCompat.ActionBar"
+                android:layout_gravity="center"
+                android:textColor="@color/whie"
+                android:text="@string/main_home"
+                android:textSize="@dimen/sp_size_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/ll_mine"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight="1"
+                android:src="@drawable/mine"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:textColor="@color/whie"
+                android:text="@string/main_mine"
+                android:textSize="@dimen/sp_size_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+        
+    <ImageView
+        android:id="@+id/iv_main"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:layout_marginBottom="@dimen/dp_size_15"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:layout_width="@dimen/dp_size_60"
+        android:layout_height="@dimen/dp_size_60" />
+
+</RelativeLayout>

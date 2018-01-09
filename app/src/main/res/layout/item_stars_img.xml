@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@color/dark_bg"
+    android:layout_height="wrap_content">
+
+    <com.fwp.moiveguide.custom.CircleImageView
+        android:id="@+id/iv_img"
+        android:layout_margin="@dimen/dp_size_10"
+        android:src="@drawable/header"
+        android:layout_width="@dimen/dp_size_70"
+        android:layout_height="@dimen/dp_size_60" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:textSize="@dimen/sp_size_14"
+        android:textColor="@color/whie"
+        android:layout_marginBottom="@dimen/dp_size_2"
+        android:text="冯小刚"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_zhiwei"
+        android:textSize="@dimen/sp_size_12"
+        android:textColor="@color/whie"
+        android:text="导演"
+        android:layout_marginBottom="@dimen/dp_size_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MoiveGuide</string>
+    <string name="main_title">影片精选</string>
+    <string name="main_home">电影</string>
+    <string name="main_mine">我的</string>
+
+    <string name="detail_str1">影片介绍</string>
+    <string name="detail_str2">图片</string>
+    <string name="detail_str3">演员列表</string>
+    <string name="detail_str4">精彩看点</string>
+    <string name="detail_str5">上映时间</string>
+
+    <string name="login_title">登录</string>
+    <string name="login_register">快速注册</string>
+    <string name="login_btn_register">注册</string>
+    <string name="login_back">返回登录</string>
+</resources>

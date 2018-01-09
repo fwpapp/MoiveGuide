@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/dp_size_40"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_username"
+        android:textSize="@dimen/sp_size_14"
+        android:singleLine="true"
+        android:hint="账号"
+        android:textColor="@color/black"
+        android:layout_marginRight="@dimen/dp_size_10"
+        android:layout_marginLeft="@dimen/dp_size_10"
+        android:layout_marginBottom="@dimen/dp_size_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_pwd1"
+        android:textSize="@dimen/sp_size_14"
+        android:hint="密码"
+        android:layout_marginBottom="@dimen/dp_size_10"
+        android:textColor="@color/black"
+        android:layout_marginRight="@dimen/dp_size_10"
+        android:layout_marginLeft="@dimen/dp_size_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_pwd2"
+        android:textSize="@dimen/sp_size_14"
+        android:hint="确认密码"
+        android:textColor="@color/black"
+        android:layout_marginRight="@dimen/dp_size_10"
+        android:layout_marginLeft="@dimen/dp_size_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:singleLine="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_size_20"
+        android:layout_marginRight="@dimen/dp_size_20"
+        android:layout_marginLeft="@dimen/dp_size_20"
+        android:text="@string/login_btn_register"
+        android:paddingTop="@dimen/dp_size_10"
+        android:paddingBottom="@dimen/dp_size_10"
+        android:gravity="center_horizontal"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/sp_size_16"
+        android:background="@drawable/rounded_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:textSize="@dimen/sp_size_14"
+        android:layout_marginTop="@dimen/dp_size_20"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/login_back"
+        android:textColor="@color/main_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
