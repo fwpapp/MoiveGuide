@@ -48,7 +48,7 @@ public class MineActivity extends Base2Activity implements View.OnClickListener,
         minePresenter = new MinePresenter(app.getDbConfigs(),this);
 
         try {
-            if (SharedConfig.getInstance(this).getIntValue("isLogin",0) != 1){
+            if (SharedConfig.getInstance(this).getIntValue("isLogin",0) == 1){
                 // 加载已登录的数据
                 minePresenter.findCurrUesr(SharedConfig.getInstance(this).getIntValue("userId",-1));
             }

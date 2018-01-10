@@ -2,6 +2,7 @@ package com.fwp.moiveguide.domain;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fwp.moiveguide.R;
@@ -17,6 +18,7 @@ import org.greenrobot.eventbus.EventBus;
 public class UserDataActivity extends Base2Activity implements View.OnClickListener {
 
     private TextView tvLogout;
+    private RelativeLayout rlBack;
     private UserDataPresenter userDataPresenter;
 
     @Override
@@ -28,8 +30,10 @@ public class UserDataActivity extends Base2Activity implements View.OnClickListe
 
     private void init() {
         tvLogout = (TextView) findViewById(R.id.tv_logout);
+        rlBack = (RelativeLayout) findViewById(R.id.rl_back);
 
         tvLogout.setOnClickListener(this);
+        rlBack.setOnClickListener(this);
 
         userDataPresenter = new UserDataPresenter(this,app.getDbConfigs());
     }
@@ -43,6 +47,9 @@ public class UserDataActivity extends Base2Activity implements View.OnClickListe
                 user.setUsername("");
                 user.setPassword("");
                 EventBus.getDefault().post(new LoginEvent(user));
+                finish();
+                break;
+            case R.id.rl_back:
                 finish();
                 break;
         }
