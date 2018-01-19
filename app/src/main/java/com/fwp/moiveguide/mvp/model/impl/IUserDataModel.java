@@ -5,4 +5,5 @@ package com.fwp.moiveguide.mvp.model.impl;
  */
 public interface IUserDataModel {
     boolean logout();
+    String findUserName(int id);
 }

@@ -9,16 +9,18 @@ import com.fwp.moiveguide.R;
 import com.fwp.moiveguide.bean.User;
 import com.fwp.moiveguide.event.LoginEvent;
 import com.fwp.moiveguide.mvp.presenter.UserDataPresenter;
+import com.fwp.moiveguide.mvp.view.impl.IDataView;
+import com.fwp.moiveguide.utils.SharedConfig;
 
 import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by Administrator on 2018/1/9.
  */
-public class UserDataActivity extends Base2Activity implements View.OnClickListener {
+public class UserDataActivity extends Base2Activity implements View.OnClickListener,IDataView {
 
-    private TextView tvLogout;
-    private RelativeLayout rlBack;
+    private TextView tvLogout,tvName;
+    private RelativeLayout rlBack,rlHeader;
     private UserDataPresenter userDataPresenter;
 
     @Override
@@ -31,11 +33,20 @@ public class UserDataActivity extends Base2Activity implements View.OnClickListe
     private void init() {
         tvLogout = (TextView) findViewById(R.id.tv_logout);
         rlBack = (RelativeLayout) findViewById(R.id.rl_back);
+        rlHeader = (RelativeLayout) findViewById(R.id.rl_header);
+        tvName = (TextView) findViewById(R.id.tv_name);
 
         tvLogout.setOnClickListener(this);
         rlBack.setOnClickListener(this);
+        rlHeader.setOnClickListener(this);
 
-        userDataPresenter = new UserDataPresenter(this,app.getDbConfigs());
+        userDataPresenter = new UserDataPresenter(this,app.getDbConfigs(),this);
+
+        try {
+            userDataPresenter.showUserName(SharedConfig.getInstance(this).getIntValue("userId",-1));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -52,7 +63,15 @@ public class UserDataActivity extends Base2Activity implements View.OnClickListe
             case R.id.rl_back:
                 finish();
                 break;
+            case R.id.rl_header:
+                // 点击可换头像
+                break;
         }
 
+    }
+
+    @Override
+    public void showUserName(String name) {
+        tvName.setText(name);
     }
 }

@@ -5,13 +5,40 @@
 
     <include layout="@layout/layout_top" />
 
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_marginTop="@dimen/dp_size_10"
+        android:padding="@dimen/dp_size_10"
+        android:background="@color/whie"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_size_120">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_size_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.fwp.moiveguide.custom.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/header"
+            android:layout_width="@dimen/dp_size_100"
+            android:layout_height="@dimen/dp_size_100" />
+
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/tv_logout"
+        android:layout_margin="@dimen/dp_size_40"
         android:layout_marginTop="@dimen/dp_size_10"
         android:padding="@dimen/dp_size_10"
         android:gravity="center"
         android:background="@drawable/rounded_btn"
-        android:text="退出登录"
+        android:text="@string/data_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
